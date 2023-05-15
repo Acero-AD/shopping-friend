@@ -13,7 +13,7 @@ nodejs \
 
 RUN gem install bundler
 
-COPY . /app
-COPY Gemfile Gemfile.lock ./
+COPY . ./
 
 RUN bundle install
+CMD ["rails", "server", "-b", "0.0.0.0"]
