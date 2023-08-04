@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-
   def create
     item = Item.new(item_params)
     price = Price.new
@@ -16,11 +15,11 @@ class ItemsController < ApplicationController
 
   private
 
-  memoize def item_params
-    params.require(:item).permit(:name, :brand)
-  end
+    memoize def item_params
+      params.require(:item).permit(:name, :brand)
+    end
 
-  memoize def price_params
-    params.require(:price).permit(:amount, :store_id)
-  end
+    memoize def price_params
+      params.require(:price).permit(:amount, :store_id)
+    end
 end

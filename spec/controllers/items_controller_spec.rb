@@ -2,18 +2,18 @@ require "rails_helper"
 
 RSpec.describe ItemsController, type: :controller do
   let(:store) { create(:store) }
-  let(:data) {
+  let(:data) do
     {
       "item" => {
         "name" => "test",
-        "brand" => "test_brand",
+        "brand" => "test_brand"
       },
       "price" => {
         "amount" => 100,
         "store_id" => store.id
       }
     }
-  }
+  end
   let(:response_body) { JSON.parse(response.body) }
 
   it "should create an item" do
