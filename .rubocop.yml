@@ -213,3 +213,6 @@ Style/TrivialAccessors:
 # Use guard clauses when possible
 Style/GuardClause:
   Enabled: true
+
+Style/Documentation:
+  Enabled: false
