@@ -18,13 +18,10 @@ RSpec.describe ItemsController, type: :controller do
 
   it "should create an item" do
     post :create, params: data
-    binding.pry
     expect(response).to have_http_status(:created)
     expect(response_body["name"]).to eq("test")
     expect(response_body["brand"]).to eq("test_brand")
-    expect(response_body["prices"].first["amount"]).to eq(100)
+    expect(response_body["prices"].first["amount"]).to eq("100.0")
     expect(response_body["prices"].first["store_id"]).to eq(store.id)
   end
-
-
 end

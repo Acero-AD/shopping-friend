@@ -53,6 +53,7 @@ gem "factory_bot_rails", "~> 6.2"
 
 gem "rspec-rails", "~> 4.0.1"
 gem "memoit", "~> 0.3.0"
+gem "active_model_serializers", "~> 0.10.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
