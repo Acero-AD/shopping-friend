@@ -12,7 +12,8 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - .:/app
+      - .:/app:cached
+      - bundle_cache:/bundle
     depends_on:
       - db
     environment:
@@ -37,3 +38,4 @@ services:
 
 volumes:
   database_data:
+  bundle_cache:
